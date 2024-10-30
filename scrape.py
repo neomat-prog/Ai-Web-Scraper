@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 AUTH = os.getenv("AUTH")
-SBR_WEBDRIVER = os.getenv("SBR_WEBDRIVER")
+SBR_WEBDRIVER = f'https://{AUTH}@zproxy.lum-superproxy.io:9515'
 
 
 def scrape_website(website):
