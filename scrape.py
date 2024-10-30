@@ -1,9 +1,15 @@
+import os
 from bs4 import BeautifulSoup
 from selenium.webdriver import Remote, ChromeOptions
 from selenium.webdriver.chromium.remote_connection import ChromiumRemoteConnection
 from selenium.webdriver.common.by import By
-AUTH = 'brd-customer-hl_e61a33fe-zone-ai_scraper:3dxu02b80v4c'
-SBR_WEBDRIVER = "SBR_WEBDRIVER"
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
+AUTH = os.getenv("AUTH")
+SBR_WEBDRIVER = os.getenv("SBR_WEBDRIVER")
 
 
 def scrape_website(website):
